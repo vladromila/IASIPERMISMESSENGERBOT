@@ -21,8 +21,8 @@ bot.setGetStartedButton(() => {
 })
 
 
-bot.on('postback:PAYBILL_PAYLOAD', (payload, chat) => {
-  chat.say(`Pay Bill here...`);
+bot.on('postback:HELP_INSTRUCTORI', (payload, chat) => {
+  chat.say("avem cei mai misto instructori!");
 });
 
 
