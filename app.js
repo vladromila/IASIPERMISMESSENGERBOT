@@ -9,8 +9,8 @@ const bot = new BootBot({
   port: 5555
 });
 
-bot.setGetStartedButton(() => {
-  bot.say({
+bot.setGetStartedButton((chat) => {
+  chat.say({
     text: 'Bună ziua! Cu ce vă putem ajuta?',
     buttons: [
       { type: 'postback', title: 'Prețuri', payload: 'HELP_PREȚURI' },
