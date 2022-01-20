@@ -10,24 +10,7 @@ const bot = new BootBot({
 });
 
 bot.on('message', (payload, chat) => {
-  const text = payload.message.text;
-  chat.say('Hello world!');
-
-  // Send a text message with quick replies
-  chat.say({
-    text: 'Favorite color?',
-    quickReplies: ['Red', 'Blue', 'Green']
-  });
-
-  // Send a button template
-  chat.say({
-    text: 'Favorite color?',
-    buttons: [
-      { type: 'postback', title: 'Red', payload: 'FAVORITE_RED' },
-      { type: 'postback', title: 'Blue', payload: 'FAVORITE_BLUE' },
-      { type: 'postback', title: 'Green', payload: 'FAVORITE_GREEN' }
-    ]
-  });
+  const text = payload.message.text
 
   // Send a list template
   chat.say({
