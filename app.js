@@ -9,19 +9,45 @@ const bot = new BootBot({
   port: 5555
 });
 
-bot.on('message', (payload, chat) => {
-  const text = payload.message.text
-
-  // Send a list template
-  chat.say({
-    elements: [
-      { title: 'Artile 1', image_url: 'https://cdn.volkswagen.ro/media/Content_SimpleMedia_Image_Component/9701-113486-74968-113487-child/dh-995-e2a2c0/f5a616c0/1633005169/premiera.jpg', default_action: {} },
-      { title: 'Artile 2', image_url: 'https://cdn.volkswagen.ro/media/Content_SimpleMedia_Image_Component/9701-113486-74968-113487-child/dh-995-e2a2c0/f5a616c0/1633005169/premiera.jpg', default_action: {} }
-    ],
-    buttons: [
-      { type: 'postback', title: 'View More', payload: 'VIEW_MORE' }
+bot.setPersistentMenu([
+  {
+    title: 'My Account',
+    type: 'nested',
+    call_to_actions: [
+      {
+        title: 'Pay Bill',
+        type: 'postback',
+        payload: 'PAYBILL_PAYLOAD'
+      },
+      {
+        title: 'History',
+        type: 'postback',
+        payload: 'HISTORY_PAYLOAD'
+      },
+      {
+        title: 'Contact Info',
+        type: 'postback',
+        payload: 'CONTACT_INFO_PAYLOAD'
+      }
     ]
-  });
+  },
+  {
+    title: 'Go to Website',
+    type: 'web_url',
+    url: 'http://purple.com'
+  }
+], disableInput);
+
+bot.on('postback:PAYBILL_PAYLOAD', (payload, chat) => {
+  chat.say(`Pay Bill here...`);
+});
+
+bot.on('postback:HISTORY_PAYLOAD', (payload, chat) => {
+  chat.say(`History here...`);
+});
+
+bot.on('postback:CONTACT_INFO_PAYLOAD', (payload, chat) => {
+  chat.say(`Contact info here...`);
 });
 
 bot.start(process.env.PORT);
