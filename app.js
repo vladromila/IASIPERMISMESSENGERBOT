@@ -201,41 +201,31 @@ function handlePostback(senderPsid, receivedPostback) {
                 "image_url": "https://cdn.audi.ro/media/TextBox_Image_Component/63210-626949-image/dh-730-6ba340/741868e4/1627890126/audi-a3-sportback-tfsi-e-frontansicht.jpg",
                 "buttons": [
                   {
-                    "title": "View",
-                    "type": "web_url",
-                    "url": "https://iasipermis.ro",
-                    "messenger_extensions": true,
-                    "webview_height_ratio": "tall",
+                    "title": "View More",
+                    "type": "postback",
+                    "payload": "payload"
                   }
                 ]
               },
               {
                 "title": "Classic White T-Shirt",
                 "subtitle": "See all our colors",
-                "default_action": {
-                  "type": "web_url",
-                  "url": "https://iasipermis.ro",
-                  "messenger_extensions": false,
-                  "webview_height_ratio": "tall"
+                "button":
+                {
+                  "title": "View More",
+                  "type": "postback",
+                  "payload": "payload"
                 }
               },
               {
                 "title": "Classic Blue T-Shirt",
                 "image_url": "https://cdn.audi.ro/media/TextBox_Image_Component/63210-626949-image/dh-730-6ba340/741868e4/1627890126/audi-a3-sportback-tfsi-e-frontansicht.jpg",
                 "subtitle": "100% Cotton, 200% Comfortable",
-                "default_action": {
-                  "type": "web_url",
-                  "url": "https://iasipermis.ro",
-                  "messenger_extensions": true,
-                  "webview_height_ratio": "tall",
-                },
                 "buttons": [
                   {
-                    "title": "Shop Now",
-                    "type": "web_url",
-                    "url": "https://iasipermis.ro",
-                    "messenger_extensions": true,
-                    "webview_height_ratio": "tall",
+                    "title": "View More",
+                    "type": "postback",
+                    "payload": "payload"
                   }
                 ]
               }
