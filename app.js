@@ -192,28 +192,27 @@ function handlePostback(senderPsid, receivedPostback) {
         "attachment": {
           "type": "template",
           "payload": {
-            "template_type": "generic",
+            "template_type": "list",
+            "top_element_style": "compact",
             "elements": [
               {
-                "title": "Welcome!",
-                "image_url": "https://raw.githubusercontent.com/fbsamples/original-coast-clothing/main/public/styles/male-work.jpg",
-                "subtitle": "We have the right hat for everyone.",
-                "default_action": {
-                  "type": "web_url",
-                  "url": "https://www.originalcoastclothing.com/",
-                  "webview_height_ratio": "tall",
-                },
+                "title": "Classic T-Shirt Collection",
+                "subtitle": "See all our colors",
+                "image_url": "https://cdn.audi.ro/media/TextBox_Image_Component/63210-626949-image/dh-730-6ba340/741868e4/1627890126/audi-a3-sportback-tfsi-e-frontansicht.jpg",
                 "buttons": [
                   {
-                    "type": "web_url",
-                    "url": "https://www.originalcoastclothing.com/",
-                    "title": "View Website"
-                  }, {
+                    "title": "View More",
                     "type": "postback",
-                    "title": "Start Chatting",
-                    "payload": "DEVELOPER_DEFINED_PAYLOAD"
+                    "payload": "payload"
                   }
                 ]
+              },
+            ],
+            "buttons": [
+              {
+                "title": "View More",
+                "type": "postback",
+                "payload": "payload"
               }
             ]
           }
