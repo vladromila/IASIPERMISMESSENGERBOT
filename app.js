@@ -192,51 +192,40 @@ function handlePostback(senderPsid, receivedPostback) {
         "attachment": {
           "type": "template",
           "payload": {
-            "template_type": "list",
-            "top_element_style": "compact",
+            "template_type": "generic",
             "elements": [
               {
-                "title": "Classic T-Shirt Collection",
-                "subtitle": "See all our colors",
+                "title": "Volkswagen Golf 5",
                 "image_url": "https://cdn.audi.ro/media/TextBox_Image_Component/63210-626949-image/dh-730-6ba340/741868e4/1627890126/audi-a3-sportback-tfsi-e-frontansicht.jpg",
-                "buttons": [
-                  {
-                    "title": "View More",
-                    "type": "postback",
-                    "payload": "payload"
-                  }
+                "subtitle": "Cutie de viteze: manuală",
+                "buttons": [{
+                  "type": "postback",
+                  "title": "Detalii",
+                  "payload": "TEST"
+                }
                 ]
               },
               {
-                "title": "Classic T-Shirt Collection",
-                "subtitle": "See all our colors",
+                "title": "Volkswagen Golf 6",
                 "image_url": "https://cdn.audi.ro/media/TextBox_Image_Component/63210-626949-image/dh-730-6ba340/741868e4/1627890126/audi-a3-sportback-tfsi-e-frontansicht.jpg",
-                "buttons": [
-                  {
-                    "title": "View More",
-                    "type": "postback",
-                    "payload": "payload"
-                  }
+                "subtitle": "Cutie de viteze: manuală",
+                "buttons": [{
+                  "type": "postback",
+                  "title": "Detalii",
+                  "payload": "TEST"
+                }
                 ]
               },
               {
-                "title": "Classic T-Shirt Collection",
-                "subtitle": "See all our colors",
+                "title": "Ford Focus",
                 "image_url": "https://cdn.audi.ro/media/TextBox_Image_Component/63210-626949-image/dh-730-6ba340/741868e4/1627890126/audi-a3-sportback-tfsi-e-frontansicht.jpg",
-                "buttons": [
-                  {
-                    "title": "View More",
-                    "type": "postback",
-                    "payload": "payload"
-                  }
+                "subtitle": "Cutie de viteze: manuală",
+                "buttons": [{
+                  "type": "postback",
+                  "title": "Detalii",
+                  "payload": "TEST"
+                }
                 ]
-              }
-            ],
-            "buttons": [
-              {
-                "title": "View More",
-                "type": "postback",
-                "payload": "payload"
               }
             ]
           }
