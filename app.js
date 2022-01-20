@@ -158,45 +158,45 @@ function handlePostback(senderPsid, receivedPostback) {
   let payload = receivedPostback.payload;
 
   // Set the response based on the postback payload
-  if (payload === "GET_STARTED") {
-    console.log("GETTING STARTED");
-    response = {
-      "attachment": {
-        "type": "template",
-        "payload": {
-          "template_type": "generic",
-          "elements": [
-            {
-              "title": "Welcome!",
-              "image_url": "https://raw.githubusercontent.com/fbsamples/original-coast-clothing/main/public/styles/male-work.jpg",
-              "subtitle": "We have the right hat for everyone.",
-              "default_action": {
-                "type": "web_url",
-                "url": "https://www.originalcoastclothing.com/",
-                "webview_height_ratio": "tall",
+  switch (payload) {
+    case "GETTING_STARTED":
+      response = {
+        "attachment": {
+          "type": "template",
+          "payload": {
+            "template_type": "button",
+            "text": "Salutări din partea echipei Iași Permis. Cu ce informații vă putem ajuta?",
+            "buttons": [
+              {
+                "type": "postback",
+                "title": "Prețuri",
+                "payload": "BUTTON_PRICES"
               },
-              "buttons": [
-                {
-                  "type": "web_url",
-                  "url": "https://www.originalcoastclothing.com/",
-                  "title": "View Website"
-                }, {
-                  "type": "postback",
-                  "title": "Start Chatting",
-                  "payload": "DEVELOPER_DEFINED_PAYLOAD"
-                }
-              ]
-            }
-          ]
+              {
+                "type": "postback",
+                "title": "Mașini disponibile",
+                "payload": "BUTTON_CARS_AVAILABLE"
+              },
+              {
+                "type": "postback",
+                "title": "Instructori",
+                "payload": "BUTTON_TEACHERS"
+              }
+            ]
+          }
         }
       }
-    }
+      break;
+    case "BUTTON_PRICES":
+      break;
+    case "BUTTON_CARS_AVAILABLE":
+      break;
+    case "BUTTON_TEACHERS":
+      break;
+    default:
+      break;
   }
-  if (payload === 'yes') {
-    response = { 'text': 'Thanks!' };
-  } else if (payload === 'no') {
-    response = { 'text': 'Oops, try sending another image.' };
-  }
+
   // Send the message to acknowledge the postback
   callSendAPI(senderPsid, response);
 }
