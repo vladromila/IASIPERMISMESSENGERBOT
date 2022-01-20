@@ -11,10 +11,32 @@ const bot = new BootBot({
 
 bot.on('message', (payload, chat) => {
   const text = payload.message.text;
+  chat.say('Hello world!');
+
+  // Send a text message with quick replies
   chat.say({
-    cards: [
-      { title: 'Volkswagen Golf 6', image_url: 'https://www.chicagotribune.com/resizer/coI0JHa_AAGTW3lcMXxSYjsli10=/1200x0/top/arc-anglerfish-arc2-prod-tronc.s3.amazonaws.com/public/53E7MBRVDZHVNBUZPDLOWAXQ3I.jpg', subtitle: "Cutie de viteze: manuală" },
-      { title: 'Card 2', image_url: 'https://www.chicagotribune.com/resizer/coI0JHa_AAGTW3lcMXxSYjsli10=/1200x0/top/arc-anglerfish-arc2-prod-tronc.s3.amazonaws.com/public/53E7MBRVDZHVNBUZPDLOWAXQ3I.jpg', default_action: {} }
+    text: 'Favorite color?',
+    quickReplies: ['Red', 'Blue', 'Green']
+  });
+
+  // Send a button template
+  chat.say({
+    text: 'Favorite color?',
+    buttons: [
+      { type: 'postback', title: 'Red', payload: 'FAVORITE_RED' },
+      { type: 'postback', title: 'Blue', payload: 'FAVORITE_BLUE' },
+      { type: 'postback', title: 'Green', payload: 'FAVORITE_GREEN' }
+    ]
+  });
+
+  // Send a list template
+  chat.say({
+    elements: [
+      { title: 'Artile 1', image_url: '/path/to/image1.png', default_action: {} },
+      { title: 'Artile 2', image_url: '/path/to/image2.png', default_action: {} }
+    ],
+    buttons: [
+      { type: 'postback', title: 'View More', payload: 'VIEW_MORE' }
     ]
   });
 });
