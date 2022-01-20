@@ -10,7 +10,7 @@ const bot = new BootBot({
 });
 
 bot.setGetStartedButton(() => {
-  chat.say({
+  bot.say({
     text: 'Bună ziua! Cu ce vă putem ajuta?',
     buttons: [
       { type: 'postback', title: 'Prețuri', payload: 'HELP_PREȚURI' },
