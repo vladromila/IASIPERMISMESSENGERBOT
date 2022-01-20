@@ -197,7 +197,7 @@ function handlePostback(senderPsid, receivedPostback) {
               {
                 "title": "Volkswagen Golf 5",
                 "image_url": "https://cdn.audi.ro/media/TextBox_Image_Component/63210-626949-image/dh-730-6ba340/741868e4/1627890126/audi-a3-sportback-tfsi-e-frontansicht.jpg",
-                "subtitle": "Cutie de viteze: manuală",
+                "subtitle": "Cutie de viteze: manuală\n1700 RON",
                 "buttons": [{
                   "type": "postback",
                   "title": "Detalii",
@@ -208,7 +208,7 @@ function handlePostback(senderPsid, receivedPostback) {
               {
                 "title": "Volkswagen Golf 6",
                 "image_url": "https://cdn.audi.ro/media/TextBox_Image_Component/63210-626949-image/dh-730-6ba340/741868e4/1627890126/audi-a3-sportback-tfsi-e-frontansicht.jpg",
-                "subtitle": "Cutie de viteze: manuală",
+                "subtitle": "Cutie de viteze: manuală\n1700 RON",
                 "buttons": [{
                   "type": "postback",
                   "title": "Detalii",
@@ -219,7 +219,7 @@ function handlePostback(senderPsid, receivedPostback) {
               {
                 "title": "Ford Focus",
                 "image_url": "https://cdn.audi.ro/media/TextBox_Image_Component/63210-626949-image/dh-730-6ba340/741868e4/1627890126/audi-a3-sportback-tfsi-e-frontansicht.jpg",
-                "subtitle": "Cutie de viteze: manuală",
+                "subtitle": "Cutie de viteze: manuală\n1700 RON",
                 "buttons": [{
                   "type": "postback",
                   "title": "Detalii",
