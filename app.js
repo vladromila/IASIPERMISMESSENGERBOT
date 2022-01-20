@@ -198,15 +198,14 @@ function handlePostback(senderPsid, receivedPostback) {
               {
                 "title": "Classic T-Shirt Collection",
                 "subtitle": "See all our colors",
-                "image_url": "https://originalcoastclothing.com/img/collection.png",
+                "image_url": "https://cdn.audi.ro/media/TextBox_Image_Component/63210-626949-image/dh-730-6ba340/741868e4/1627890126/audi-a3-sportback-tfsi-e-frontansicht.jpg",
                 "buttons": [
                   {
                     "title": "View",
                     "type": "web_url",
-                    "url": "https://originalcoastclothing.com/collection",
+                    "url": "https://iasipermis.ro",
                     "messenger_extensions": true,
                     "webview_height_ratio": "tall",
-                    "fallback_url": "https://originalcoastclothing.com/"
                   }
                 ]
               },
@@ -215,30 +214,28 @@ function handlePostback(senderPsid, receivedPostback) {
                 "subtitle": "See all our colors",
                 "default_action": {
                   "type": "web_url",
-                  "url": "https://originalcoastclothing.com/view?item=100",
+                  "url": "https://iasipermis.ro",
                   "messenger_extensions": false,
                   "webview_height_ratio": "tall"
                 }
               },
               {
                 "title": "Classic Blue T-Shirt",
-                "image_url": "https://originalcoastclothing.com/img/blue-t-shirt.png",
+                "image_url": "https://cdn.audi.ro/media/TextBox_Image_Component/63210-626949-image/dh-730-6ba340/741868e4/1627890126/audi-a3-sportback-tfsi-e-frontansicht.jpg",
                 "subtitle": "100% Cotton, 200% Comfortable",
                 "default_action": {
                   "type": "web_url",
-                  "url": "https://originalcoastclothing.com/view?item=101",
+                  "url": "https://iasipermis.ro",
                   "messenger_extensions": true,
                   "webview_height_ratio": "tall",
-                  "fallback_url": "https://originalcoastclothing.com/"
                 },
                 "buttons": [
                   {
                     "title": "Shop Now",
                     "type": "web_url",
-                    "url": "https://originalcoastclothing.com/shop?item=101",
+                    "url": "https://iasipermis.ro",
                     "messenger_extensions": true,
                     "webview_height_ratio": "tall",
-                    "fallback_url": "https://originalcoastclothing.com/"
                   }
                 ]
               }
@@ -287,7 +284,6 @@ function callSendAPI(senderPsid, response) {
     'method': 'POST',
     'json': requestBody
   }, (err, _res, _body) => {
-    console.log(_res);
     if (!err) {
       console.log('Message sent!');
     } else {
