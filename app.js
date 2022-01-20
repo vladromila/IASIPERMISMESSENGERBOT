@@ -162,28 +162,29 @@ function handlePostback(senderPsid, receivedPostback) {
     response = {
       'attachment': {
         'type': 'template',
-        'payload': {
-          'template_type': 'generic',
-          'elements': [{
-            'title': 'Is this the right picture?',
-            'subtitle': 'Tap a button to answer.',
-            'image_url': attachmentUrl,
-            'buttons': [
-              {
-                'type': 'postback',
-                'title': 'Yes!',
-                'payload': 'yes',
+        "payload": {
+          "template_type": "generic",
+          "elements": [
+            {
+              "title": "<TITLE_TEXT>",
+              "image_url": "<IMAGE_URL_TO_DISPLAY>",
+              "subtitle": "<SUBTITLE_TEXT>",
+              "default_action": {
+                "type": "web_url",
+                "url": "https://iasipermis.ro",
+                "messenger_extensions": true,
+                "webview_height_ratio": "all"
               },
-              {
-                'type': 'postback',
-                'title': 'No!',
-                'payload': 'no',
-              }
-            ],
-          }]
+              "buttons": [{
+                "type": "postback",
+                "title": "test",
+                "payload": "TEST"
+              }]
+            },
+          ]
         }
       }
-    };
+    }
   }
   if (payload === 'yes') {
     response = { 'text': 'Thanks!' };
