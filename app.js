@@ -159,6 +159,7 @@ function handlePostback(senderPsid, receivedPostback) {
 
   // Set the response based on the postback payload
   if (payload === "GET_STARTED") {
+    console.log("GETTING STARTED");
     response = {
       'attachment': {
         'type': 'template',
