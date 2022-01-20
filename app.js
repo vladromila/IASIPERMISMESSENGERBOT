@@ -207,6 +207,30 @@ function handlePostback(senderPsid, receivedPostback) {
                   }
                 ]
               },
+              {
+                "title": "Classic T-Shirt Collection",
+                "subtitle": "See all our colors",
+                "image_url": "https://cdn.audi.ro/media/TextBox_Image_Component/63210-626949-image/dh-730-6ba340/741868e4/1627890126/audi-a3-sportback-tfsi-e-frontansicht.jpg",
+                "buttons": [
+                  {
+                    "title": "View More",
+                    "type": "postback",
+                    "payload": "payload"
+                  }
+                ]
+              },
+              {
+                "title": "Classic T-Shirt Collection",
+                "subtitle": "See all our colors",
+                "image_url": "https://cdn.audi.ro/media/TextBox_Image_Component/63210-626949-image/dh-730-6ba340/741868e4/1627890126/audi-a3-sportback-tfsi-e-frontansicht.jpg",
+                "buttons": [
+                  {
+                    "title": "View More",
+                    "type": "postback",
+                    "payload": "payload"
+                  }
+                ]
+              }
             ],
             "buttons": [
               {
