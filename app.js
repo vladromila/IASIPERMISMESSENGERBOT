@@ -36,7 +36,7 @@ bot.setPersistentMenu([
     type: 'web_url',
     url: 'http://purple.com'
   }
-], disableInput);
+], true);
 
 bot.on('postback:PAYBILL_PAYLOAD', (payload, chat) => {
   chat.say(`Pay Bill here...`);
