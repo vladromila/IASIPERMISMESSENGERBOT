@@ -167,9 +167,9 @@ function handlePostback(senderPsid, receivedPostback) {
           "template_type": "generic",
           "elements": [
             {
-              "title": "<TITLE_TEXT>",
-              "image_url": "<IMAGE_URL_TO_DISPLAY>",
-              "subtitle": "<SUBTITLE_TEXT>",
+              "title": "Test",
+              "image_url": "Test",
+              "subtitle": "Test",
               "default_action": {
                 "type": "web_url",
                 "url": "https://iasipermis.ro",
