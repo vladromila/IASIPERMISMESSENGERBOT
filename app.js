@@ -161,27 +161,32 @@ function handlePostback(senderPsid, receivedPostback) {
   if (payload === "GET_STARTED") {
     console.log("GETTING STARTED");
     response = {
-      'attachment': {
-        'type': 'template',
+      "attachment": {
+        "type": "template",
         "payload": {
           "template_type": "generic",
           "elements": [
             {
-              "title": "Test",
-              "image_url": "Test",
-              "subtitle": "Test",
+              "title": "Welcome!",
+              "image_url": "https://raw.githubusercontent.com/fbsamples/original-coast-clothing/main/public/styles/male-work.jpg",
+              "subtitle": "We have the right hat for everyone.",
               "default_action": {
                 "type": "web_url",
-                "url": "https://iasipermis.ro",
-                "messenger_extensions": true,
-                "webview_height_ratio": "all"
+                "url": "https://www.originalcoastclothing.com/",
+                "webview_height_ratio": "tall",
               },
-              "buttons": [{
-                "type": "postback",
-                "title": "test",
-                "payload": "TEST"
-              }]
-            },
+              "buttons": [
+                {
+                  "type": "web_url",
+                  "url": "https://www.originalcoastclothing.com/",
+                  "title": "View Website"
+                }, {
+                  "type": "postback",
+                  "title": "Start Chatting",
+                  "payload": "DEVELOPER_DEFINED_PAYLOAD"
+                }
+              ]
+            }
           ]
         }
       }
