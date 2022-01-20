@@ -192,49 +192,28 @@ function handlePostback(senderPsid, receivedPostback) {
         "attachment": {
           "type": "template",
           "payload": {
-            "template_type": "list",
-            "top_element_style": "compact",
+            "template_type": "generic",
             "elements": [
               {
-                "title": "Classic T-Shirt Collection",
-                "subtitle": "See all our colors",
-                "image_url": "https://cdn.audi.ro/media/TextBox_Image_Component/63210-626949-image/dh-730-6ba340/741868e4/1627890126/audi-a3-sportback-tfsi-e-frontansicht.jpg",
+                "title": "Welcome!",
+                "image_url": "https://raw.githubusercontent.com/fbsamples/original-coast-clothing/main/public/styles/male-work.jpg",
+                "subtitle": "We have the right hat for everyone.",
+                "default_action": {
+                  "type": "web_url",
+                  "url": "https://www.originalcoastclothing.com/",
+                  "webview_height_ratio": "tall",
+                },
                 "buttons": [
                   {
-                    "title": "View More",
+                    "type": "web_url",
+                    "url": "https://www.originalcoastclothing.com/",
+                    "title": "View Website"
+                  }, {
                     "type": "postback",
-                    "payload": "payload"
+                    "title": "Start Chatting",
+                    "payload": "DEVELOPER_DEFINED_PAYLOAD"
                   }
                 ]
-              },
-              {
-                "title": "Classic White T-Shirt",
-                "subtitle": "See all our colors",
-                "button":
-                {
-                  "title": "View More",
-                  "type": "postback",
-                  "payload": "payload"
-                }
-              },
-              {
-                "title": "Classic Blue T-Shirt",
-                "image_url": "https://cdn.audi.ro/media/TextBox_Image_Component/63210-626949-image/dh-730-6ba340/741868e4/1627890126/audi-a3-sportback-tfsi-e-frontansicht.jpg",
-                "subtitle": "100% Cotton, 200% Comfortable",
-                "buttons": [
-                  {
-                    "title": "View More",
-                    "type": "postback",
-                    "payload": "payload"
-                  }
-                ]
-              }
-            ],
-            "buttons": [
-              {
-                "title": "View More",
-                "type": "postback",
-                "payload": "payload"
               }
             ]
           }
@@ -274,6 +253,7 @@ function callSendAPI(senderPsid, response) {
     'method': 'POST',
     'json': requestBody
   }, (err, _res, _body) => {
+    console.log(_res);
     if (!err) {
       console.log('Message sent!');
     } else {
