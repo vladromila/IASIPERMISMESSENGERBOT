@@ -159,7 +159,7 @@ function handlePostback(senderPsid, receivedPostback) {
 
   // Set the response based on the postback payload
   switch (payload) {
-    case "GETTING_STARTED":
+    case "GET_STARTED":
       response = {
         "attachment": {
           "type": "template",
